@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+  <title>jQuery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+
+
+
+  <style type="text/css" media="screen">
+
+  
+  h1 {
+
+    font-size: 30px;
+      font-family:Arial, Helvetica, sans-serif;
+      color: #090;
+
+  } 
+
+  #un_id {
+
+    background-color: #48c96a;
+    width: 30px;
+    height:30px;
+    margin:10px;
+
+
+  }
+
+  .une_classe {
+
+    background-color: #4ab5d3;
+    width: 30px;
+    height:30px;
+    margin:10px;
+
+  }
+
+  p{
+
+    background-color: #ffffff;
+  }
+
+  textarea{
+
+    background-color: #ffffff;
+  }
+
+  span{
+
+    background-color: #ffffff;
+  }
+
+
+  </style>
+  
+
+</head>
+
+
+<body>
+
+  <h1>Ceci est un titre</h1>
+
+  <ul>
+    <li>HTML</li>
+    <li>Python</li>
+
+  </ul>
+
+  <p>Ceci est un paragraphe</p>
+
+  <span>ceci est une span area</span>
+
+<br>
+  <textarea name="zoneText"> ceci est une textArea</textarea>
+
+  <br>
+
+  
+
+  <div id="un_id">
+    
+  </div>
+
+  <div class="une_classe">
+    
+  </div>
+
+  <form>
+
+    <table>
+        
+      <tr>
+        <td>Nom:</td>
+        <td><input type="text" id="name" required placeholder="Nom"> </td>
+      </tr>
+    
+      <tr>
+        <td>Age:</td>
+        <td><input type="number" id="age" required placeholder="age"></td>
+      </tr>
+
+      <tr>
+        <td>Telephone:</td>
+        <td><input type="number" id="phoneNumber" required placeholder="Numero de telephone"></td>
+      </tr>
+
+      <tr>
+        <td>Date de naissance:</td>
+        <td><input type="date" id="birthDate" required placeholder="Date de naissance"></td>
+      </tr>
+
+      <tr>
+        <td colspan="2" align="center"><input id="accept" type="checkbox" unchecked> </td>
+      </tr>
+
+      <tr>
+        <td colspan="2" align="center"><input id="button" type="button" onclick="validate()" value="Valider"> </td>
+      </tr>
+
+    </table>
+
+  </form>
+
+  <script type="text/javascript">
+
+  //sert a s'assurer que le code est bien chargé avant d'être utilisé
+  $(document).ready(function(){ 
+
+
+  $("#un_id").click(function() {
+
+    $("#un_id").css("background-color", "#d84b4b");
+
+  });
+
+  $(".une_classe").click(function() {
+
+    $(".une_classe").css("display", "none");
+
+  });
+
+  $("h1").click(function() {
+
+    $("h1").css("font-size", "50px");
+
+  });
+
+  $("ul").click(function() {
+
+    $("ul").append('<li>Java</li>');
+
+  });
+
+  $("textarea").click(function() {
+
+    $("textarea").css("background-color", "#add080");
+    $("p").css("background-color", "#add080");
+    $("span").css("background-color", "#add080");
+
+  });
+
+  $("p").click(function() {
+
+    $("textarea").css("background-color", "#add080");
+    $("p").css("background-color" ,"#add080");
+    $("span").css("background-color", "#add080");
+
+  });
+
+  $("textarea").click(function() {
+
+    $("textarea").css("background-color" ,"#add080");
+    $("p").css("background-color", "#add080");
+    $("span").css("background-color", "#add080");
+
+  });
+
+  $("div").click(function() {
+
+    alert($("div").css("background-color"));
+
+  });
+
+  $(function() {
+
+     $("button").attr("disabled", "disabled");
+
+  });
+
+  $("div").click(function() {
+
+    alert($("div").css("background-color"));
+
+  });
+
+    $("accept").click(function(){
+    
+      if($('#button').is(':disabled'))
+        {
+          $('#button').removeAttr('disabled');
+        }
+
+    else
+    {
+      $('button').attr('disabled', 'disabled');
+    }
+
+      });
+
+});
+
+  </script>
+
+</body>
+
+
+</html>
