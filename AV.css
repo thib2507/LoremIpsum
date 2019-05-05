@@ -1,0 +1,11 @@
+.page-footer {
+    margin-top:150px;
+    padding:5px 0;
+    width:100%;
+   
+}
+
+.card {
+  height:200px;
+  overflow-y: scroll;
+}
